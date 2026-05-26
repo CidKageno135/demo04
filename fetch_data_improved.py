@@ -53,7 +53,7 @@ try:
     
     print(f"\n📊 資料統計:")
     print("-" * 60)
-    print(f"   - 唯一 ID 數: {df['Id'].nunique()}")
+    print(f"   - 唯一 ID 數: {df['Id'].nunique()}")  
     print(f"   - 所有 Status 值: {df['Status'].unique()}")
     
     # 顯示坐標範圍
