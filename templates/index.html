@@ -209,6 +209,51 @@
             box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
         }
         
+        /* 日期篩選樣式 */
+        .date-filter-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #e7f3ff;
+            border-radius: 6px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .date-filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .date-filter-group label {
+            font-weight: bold;
+            color: #0066cc;
+            font-size: 14px;
+        }
+        
+        .date-input {
+            padding: 8px 12px;
+            border: 2px solid #0066cc;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            background: white;
+            transition: all 0.3s;
+        }
+        
+        .date-input:hover {
+            border-color: #004099;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+        
+        .date-input:focus {
+            outline: none;
+            border-color: #004099;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+        }
+        
         .clear-btn {
             padding: 8px 20px;
             background: #6c757d;
@@ -360,6 +405,18 @@
                             <option value="50">50 筆</option>
                             <option value="257">全部</option>
                         </select>
+                    </div>
+                </div>
+                
+                <div class="date-filter-controls">
+                    <div class="date-filter-group">
+                        <label for="dateStart">📅 開始日期：</label>
+                        <input type="date" id="dateStart" class="date-input">
+                    </div>
+                    
+                    <div class="date-filter-group">
+                        <label for="dateEnd">📅 結束日期：</label>
+                        <input type="date" id="dateEnd" class="date-input">
                     </div>
                     
                     <button id="clearBtn" class="clear-btn">清除篩選</button>
